@@ -1,0 +1,10 @@
+h3 {
+    margin-top: 80px;
+    margin-bottom: 50px;
+    word-wrap: break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @import "~@fortawesome/fontawesome-free/css/all.min.css";

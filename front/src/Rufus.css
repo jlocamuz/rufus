@@ -1,0 +1,42 @@
+.mobile-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+   
+  .circle-container {
+    border-top: 1000px;
+    display: inline-block;
+    width: 250px; /* Ajusta el tamaño del contenedor del círculo según tus necesidades */
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Agrega el sombreado al círculo */
+  }
+  
+  .circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .loader-gif {
+    background-color: #f3e8db;
+    border-radius: 50%;
+    width: 200px; /* Ajusta el ancho del GIF según sea necesario */
+    height: 200px; /* Ajusta la altura del GIF según sea necesario */
+  }
+  
+  @font-face {
+    font-family: 'FrederickatheGreat';
+    src: url('./FrederickatheGreat-Regular.ttf') format('truetype');
+  }
+  @font-face {
+    font-family: 'Original Surfer';
+    src: url('./OriginalSurfer-Regular.ttf') format('truetype');
+  }
+  
+
+  
