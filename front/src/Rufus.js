@@ -73,7 +73,7 @@ function Rufus() {
         };
 
         axios
-          .post("http://192.168.1.46:8000/menus/", formData, config)
+          .post("http://192.168.1.42:8000/menus/", formData, config)
           .then((response) => {
             if (response.data.lista_of_urls_perdish) {
               console.log(response.data.lista_of_urls_perdish);

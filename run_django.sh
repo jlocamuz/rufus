@@ -1,6 +1,8 @@
 #!/bin/bash
 port=8000
-project_dir=/Users/julialocamuz/Documents/rufus
+project_dir=$(pwd)
+
+echo "project_dir: $project_dir"
 
 # Change to the project directory
 cd $project_dir

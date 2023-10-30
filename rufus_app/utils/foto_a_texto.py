@@ -7,7 +7,7 @@ from .texto_a_ingred import procesar_oracion
 
 def obtener_texto_imagen(menu_object):
     url_imagen = menu_object['image']
-    url_imagen_sin_host = url_imagen.replace('http://192.168.1.46:8000/', '')
+    url_imagen_sin_host = url_imagen.replace('http://192.168.1.42:8000/', '')
     
     img = cv2.imread(url_imagen_sin_host)
     # Convertir la imagen a escala de grises
