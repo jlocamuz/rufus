@@ -5,7 +5,7 @@ function MyComponent() {
   const [menus, setMenus] = useState([]);
 
   const handleClick = () => {
-    axios.get('http://192.168.1.41:8000/menus/')
+    axios.get('http://0.0.0.0:8000/menus/')
       .then(response => setMenus(response.data))
       .catch(error => console.error(error));
   };

@@ -1,0 +1,33 @@
+# Usar imagen base oficial de Python
+FROM python:3.9-slim
+
+# Actualizar la lista  de paquetes e instalar OpenCV y build-essential
+RUN apt-get update && apt-get install -y \
+    -y tesseract-ocr \
+    tesseract-ocr-spa \
+    python3-opencv \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*  # Limpiar la cache de apt
+
+# Establecer el directorio de trabajo
+WORKDIR /app
+
+# Copiar solo el requirements.txt primero para aprovechar la caché
+COPY requirements.txt /app/
+
+# Instalar pip, setuptools y wheel
+RUN pip install --upgrade pip setuptools wheel
+
+# Instalar dependencias desde requirements.txt
+RUN pip install -r requirements.txt
+
+# Copiar los archivos del proyecto
+COPY . /app
+
+# Exponer el puerto 8000
+EXPOSE 8000
+
+# Comando para ejecutar Django en el puerto 8000
+CMD ["python3", "manage.py", "migrate"]
+
+CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]

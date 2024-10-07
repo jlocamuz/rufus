@@ -1,0 +1,17 @@
+# Usar imagen base oficial de Node
+FROM node:14
+
+# Establecer el directorio de trabajo
+WORKDIR /app
+
+# Copiar los archivos del frontend
+COPY . /app
+
+# Instalar dependencias de Node
+RUN npm install
+
+# Exponer el puerto 3000
+EXPOSE 3000
+
+# Comando para ejecutar React directamente
+CMD ["npm", "start"]

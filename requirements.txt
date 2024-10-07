@@ -1,0 +1,10 @@
+Django==4.2
+djangorestframework==3.14.0
+psycopg2-binary==2.9.6
+pytesseract==0.3.10
+opencv-python-headless==4.10.0.84  # Esta versión debería ser compatible con numpy 1.21.x
+requests==2.31.0
+django-cors-headers==3.13.0
+numpy==1.21.6  # Cambiar aquí
+pyspellchecker==0.8.1
+nltk==3.9.1
